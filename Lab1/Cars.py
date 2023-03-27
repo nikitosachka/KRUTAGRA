@@ -107,10 +107,10 @@ while running:
                #і визначити де розмістити зображення аварії
                if event.key == K_LEFT:
                     player.rect.left = vehicle.rect.right
-                    crash_rect.center = [player.rect.left, (player.rect.center[1], + vehicle.rect.center[1] / 2)]
+                    crash_rect.center = [player.rect.left, (player.rect.center[1] + vehicle.rect.center[1]) / 2]
                elif event.key == K_RIGHT:
                     player.rect.right = vehicle.rect.left
-                    crash_rect.center = [player.rect.right, (player.rect.center[1], + vehicle.rect.center[1] / 2)]
+                    crash_rect.center = [player.rect.right, (player.rect.center[1] + vehicle.rect.center[1]) / 2]
 #-------------------------------------------------Малювання----------------------------------------------------------
     #малювання трави
     screen.fill(green)
