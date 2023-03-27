@@ -40,3 +40,31 @@ left_lane = 150
 center_lane = 250
 right_lane = 350
 lanes = [left_lane, center_lane, right_lane]
+#-------------------------------------------------Класи-------------------------------------------------------------
+#машина
+class Car(pygame.sprite.Sprite):
+          def __init__(self, image, x, y):
+               pygame.sprite.Sprite.__init__(self)
+
+               #маштабування машини щоб вона вміщалась у лінії
+               image_scale = 45 / image.get_rect().width
+               new_width = image.get_rect().width * image_scale
+               new_height = image.get_rect().height * image_scale
+               self.image = pygame.transform.scale(image, (new_width, new_height))
+
+               self.rect = self.image.get_rect()
+               self.rect.center = [x, y]
+
+class PlayerCar(Car):
+     def __init__(self, x, y):
+          image = pygame.image.load('images/car.png')
+          super().__init__(image, x, y)
+
+#стартові координати гравця
+player_x = 250
+player_y = 400
+
+#cтворення машини гравця
+player_group = pygame.sprite.Group()
+player = PlayerCar(player_x, player_y)
+player_group.add(player)
