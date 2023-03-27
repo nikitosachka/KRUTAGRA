@@ -22,3 +22,7 @@ yellow = (255, 232, 0)
 gameover = False
 speed = 2
 score = 0
+
+#маркери гри
+marker_width = 10
+marker_height = 50
