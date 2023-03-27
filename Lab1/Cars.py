@@ -68,3 +68,17 @@ player_y = 400
 player_group = pygame.sprite.Group()
 player = PlayerCar(player_x, player_y)
 player_group.add(player)
+#-------------------------------------------------Текстури----------------------------------------------------------
+#завантаження інших машин
+image_filenames = ['pickup_truck.png', 'semi_trailer.png', 'taxi.png', 'van.png']
+vehicle_images = []
+for image_flename in image_filenames:
+     image = pygame.image.load('images/' + image_flename)
+     vehicle_images.append(image)
+
+#sprite група для машин
+vehicle_group = pygame.sprite.Group()
+
+#завантаження вибуху
+crash = pygame.image.load('images/crash.png')
+crash_rect = crash.get_rect()
