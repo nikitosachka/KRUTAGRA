@@ -17,3 +17,8 @@ green = (76, 208, 56)
 red = (200, 0, 0)
 white = (255, 255, 255)
 yellow = (255, 232, 0)
+
+#налаштування гри
+gameover = False
+speed = 2
+score = 0
