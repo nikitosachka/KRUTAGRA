@@ -26,3 +26,17 @@ score = 0
 #маркери гри
 marker_width = 10
 marker_height = 50
+
+#зона дороги
+road = (100, 0, 300, height)
+left_edge_marker = (95, 0, marker_width, height)
+right_edge_marker = (395, 0, marker_width, height)
+
+#для перетинання ліній(анімація)
+lane_marker_move_y = 0
+
+#x координата лінії(білі які гравець перетинає)
+left_lane = 150
+center_lane = 250
+right_lane = 350
+lanes = [left_lane, center_lane, right_lane]
