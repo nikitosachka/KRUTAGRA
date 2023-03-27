@@ -214,4 +214,3 @@ while running:
                         gameover = False
                         running = False
 pygame.quit()
-№4444
