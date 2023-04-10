@@ -7,3 +7,6 @@ def player():
     player_y = 400
     player = PlayerCar(player_x, player_y)
     return player
+
+def test_player_start_position(player):
+    assert player.rect.center == (250, 400)
